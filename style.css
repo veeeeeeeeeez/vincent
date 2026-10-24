@@ -1,0 +1,8 @@
+body { text-align: center; }
+ul { list-style-position: inside; padding-left: 0; }
+.name { color: blue; }
+.wavy span { display: inline-block; animation: wave 1.6s ease-in-out infinite; animation-delay: calc(var(--i) * -0.15s); }
+@keyframes wave {
+  0%, 100% { transform: translateY(-2px) rotate(-3deg); }
+  50% { transform: translateY(2px) rotate(3deg); }
+}
