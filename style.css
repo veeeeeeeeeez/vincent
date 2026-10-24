@@ -1,8 +1,10 @@
 body { text-align: center; }
 ul { list-style-position: inside; padding-left: 0; }
 .name { color: blue; }
-.wavy span { display: inline-block; animation: wave 1.6s ease-in-out infinite; animation-delay: calc(var(--i) * -0.15s); }
+.wavy span { display: inline-block; }
+.wavy:hover span { animation: wave 1.6s infinite; animation-delay: calc(var(--i) * 0.15s); }
 @keyframes wave {
-  0%, 100% { transform: translateY(-2px) rotate(-3deg); }
-  50% { transform: translateY(2px) rotate(3deg); }
+  0%, 50%, 100% { transform: translateY(0) rotate(0deg); animation-timing-function: ease-out; }
+  25% { transform: translateY(-2px) rotate(-3deg); animation-timing-function: ease-in; }
+  75% { transform: translateY(2px) rotate(3deg); animation-timing-function: ease-in; }
 }
